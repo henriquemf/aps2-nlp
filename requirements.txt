@@ -1,3 +1,7 @@
 tqdm
 flask
 scikit-learn
+sentence-transformers 
+torch 
+pandas
+matplotlib
