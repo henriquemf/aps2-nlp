@@ -39,11 +39,11 @@ O treinamento do autoencoder foi realizado utilizando a função de perda **MSE 
 
 A equação da função de perda é dada por:
 
-\[ \text{Loss} = \frac{1}{n} \sum_{i=1}^{n} (x_i - \hat{x}_i)^2 \]
+$$
+\text{Loss} = \frac{1}{n} \sum_{i=1}^{n} (x_i - \hat{x}_i)^2
+$$
 
-onde \(x_i\) são os embeddings originais e \(\hat{x}_i\) são as reconstruções do autoencoder.
-
-![Modelo do Autoencoder](embeddings_otimizados.png)
+onde $$\(x_i\)$$ são os embeddings originais e $$\(\hat{x}_i\)$$ são as reconstruções do autoencoder.
 
 # Etapa 2: Visualização dos Embeddings 📊
 
@@ -52,11 +52,8 @@ Após a geração dos embeddings para os itens do dataset, o próximo passo é v
 ## Projeção e Visualização dos Embeddings
 Os embeddings gerados foram projetados para um espaço 2D usando t-SNE. Duas visualizações foram criadas: uma para os embeddings pré-treinados e outra para os embeddings otimizados pelo autoencoder. As visualizações estão apresentadas nas figuras a seguir:
 
-### Embeddings Originais (Pré-treinados)
-![Embeddings Originais](embeddings_originais.png)
-
-### Embeddings Otimizados
-![Embeddings Otimizados](embeddings_otimizados.png)
+### Embeddings Pré-Treinados vs Otimizados
+![Embeddings Otimizados](embeddings_otimizados_detalhados.png)
 
 ### Discussão sobre os Resultados
 Na visualização dos **embeddings originais**, podemos observar uma certa dispersão entre as obras de arte, mas também há áreas onde documentos semelhantes parecem estar próximos, embora não estejam claramente agrupados. Essa dispersão pode indicar que os embeddings pré-treinados não capturam completamente a semântica específica do nosso dataset.
@@ -74,8 +71,8 @@ Por outro lado, o termo "surrealism" tem um número mais restrito de obras que r
 Em contraste, no modelo TF-IDF, a situação era inversa, onde `surrealism` frequentemente retornava mais resultados do que `impressionism`. Isso pode ser explicado pela abordagem de TF-IDF, que se concentra em termos de alta frequência e relevância, independentemente da estrutura semântica. Como resultado, pode haver mais obras que contenham as palavras "surrealism" em seus títulos ou descrições, levando a uma maior contagem de resultados.
 
 ## Rubrica e pontos realizados 🟢:
-- [X] Criação e configuração da API via Flask ou FastAPI
-- [X] Escolha da API para geração do banco de dados
-- [X] Criação do banco de dados
-- [X] Criação do classificador de relevância
+- [X] Utilização do banco de dados da APS-1 
+- [X] Step 1
+- [X] Step 2
+- [X] Step 3
 - [X] Completar o README.md
